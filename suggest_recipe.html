@@ -2,29 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>The Lazy Chef - Suggest a Recipe</title>
 </head>
 <body>
-    <div>
-        <h1>The Lazy Chef</h1>
-        Simple recipes to spend more time eating and less time cooking.
-        <hr>
-    </div>
-    <div>
+    <h1>
+        The Lazy Chef
+    </h1>
+    <hr>
+    <main>
         <h2>Suggest a Recipe</h2>
-        We are always looking for delicious new recipes at <strong>The Lazy Chef</strong>. If you think you have something fantastic, please fill out the details below and we will get back to you.<br>
-    </div>
-    <div>
-        <br>
-        <!-- Form -->
-        <label for="name_field">Chef's Name</label> <br>
-        <input type="text" name="Chef's Name" id="name_field" placeholder="Full name" size="50">
-        <label for="email_field">Email</label> <br>
-        <input type="text" name="Email" id="email_field">
-    </div>
-
-
+        <p>We are always looking for delicious new recipes at <strong>The Lazy Chef</strong>. If you think you have something fantastic, please fill out the details below and we will get back to you.</p>
+        <form action="#" method="POST">
+            <div>
+                <label for="chef_name">Chef's Name</label><br>
+                <input type="text" name="fname" id="chef_name" placeholder="Full name" size="25">
+            </div>
+            <div>
+                <label for="email_field">E-mail</label><br>
+                <input type="email" name="email" id="email_field" placeholder="Valid Email Address" size="25">
+            </div>
+            <div>
+                <label for="recipe_title">Recipe Title</label><br>
+                <input type="text" name="recipe_title" id="recipe_title" placeholder="Recipe Name" size="25">
+            </div>
+            <div>
+                <label for="recipe_instructions">Recipe Instructions</label><br>
+                <textarea name="recipe_instructions" id="recipe_instructions" cols="50" rows="20" placeholder="Provide full ingredient list and full descriptive instrucitons."></textarea>
+            </div>
+            <div>
+                <label>Recipe Difficulty</label><br>
+                <input type="radio" name="recipe_difficulty" value="easy" id="easy">
+                <label for="easy">Easy</label>
+                <input type="radio" name="recipe_difficulty" value="normal" id="normal">
+                <label for="normal">Normal</label>
+                <input type="radio" name="recipe_difficulty" value="hard" id="hard">
+                <label for="hard">Hard</label>
+            </div>
+            <div>
+                <label for="food_category">Food Category</label>
+                <select name="food_category" id="food_category">
+                    <option value="">---</option>
+                    <option value="quick_bite">Quick Bites</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Submit Recipe">
+                <input type="reset" value="Cancel">
+            </div>
+        </form>
+    </main>
+    <hr>
+    <footer>
+        Copyright &copy;2020
+    </footer>
 </body>
 </html>
